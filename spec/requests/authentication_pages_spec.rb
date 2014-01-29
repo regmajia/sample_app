@@ -14,6 +14,9 @@ describe "Authentication" do
 	describe "signin" do
 		before { visit signin_path }
 
+		it { should_not have_link('Profile') }
+		it { should_not have_link('Settings') }
+
 		describe "with invalid information" do
 			before { click_button "Sign in" }
 

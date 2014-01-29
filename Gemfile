@@ -20,6 +20,8 @@ group :test do
 	gem 'selenium-webdriver', '2.35.1'
 	gem 'capybara', '2.1.0'
 	gem 'factory_girl_rails', '4.2.1'
+	gem 'cucumber-rails', '1.4.0', :require => false
+	gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 # Use SCSS for stylesheets
@@ -44,13 +46,15 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+	# bundle exec rake doc:rails generates the API under doc/api.
+	gem 'sdoc', require: false
 end
 
 group :production do
 	gem 'pg', '0.15.1'
+	gem 'rails_12factor', '0.0.2'
 end
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
